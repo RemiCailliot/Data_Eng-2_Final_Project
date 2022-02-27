@@ -1,8 +1,8 @@
 from flask import Flask, request, render_template
+import pandas as pd
 from detoxify import Detoxify
 app = Flask(__name__)
-
-
+predictor = Detoxify('original')
 @app.route('/')
 def my_form():
     return render_template('my-form.html')
@@ -11,5 +11,8 @@ def my_form():
 @app.route('/', methods=['POST'])
 def my_form_post():
     text = request.form['text']
-    processed_text = text.upper()
-    return processed_text
+    processed_text = text.lower()
+    results = predictor.predict(processed_text)
+    return str(results['toxicity'])
+    
+
