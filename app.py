@@ -17,6 +17,6 @@ def create_app(test_config=None):
         results = predictor.predict(processed_text)
         return str(results['toxicity'])
     if __name__ =='__main__':
-        app.run(host='0.0.0.0',port=5001)
+        app.run(host='0.0.0.0',port=5000)
     return app
 
