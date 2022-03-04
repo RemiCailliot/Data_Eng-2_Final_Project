@@ -3,7 +3,7 @@ pipeline{
     stages{
         stage('Cloning Git'){
             steps{  
-                powershell 'git request-pull origin/development origin/backend'
+                powershell 'git request-pull origin backend:development'
             }
         }
     }
