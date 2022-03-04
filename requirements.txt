@@ -1,3 +1,5 @@
 flask
 detoxify
 pandas
+pytest
+pytest-flask
