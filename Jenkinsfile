@@ -14,8 +14,8 @@ pipeline{
         }
         stage('Login with credentials'){
             steps{
-                powershell 'git push origin release'
+                    powershell 'git push https://RemiCailliot:Fitzgerald987@github.com/RemiCailliot/Data_Eng-2_Final_Project.git release'
+                }
             }
-        }
     }
 }
