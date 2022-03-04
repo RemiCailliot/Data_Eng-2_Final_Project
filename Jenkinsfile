@@ -8,7 +8,7 @@ pipeline{
         }
         stage('Pull request'){
             steps{  
-                powershell 'git request-pull origin/release origin/master'
+                powershell 'git request-pull origin/development origin/release'
             }
         }
     }
