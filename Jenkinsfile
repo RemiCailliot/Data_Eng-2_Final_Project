@@ -16,6 +16,7 @@ pipeline{
             steps{
                     powershell 'git add .'
                     powershell 'git commit -m "test"'
+                    powershell 'git remote -v'
                     powershell 'git push --force-with-lease origin release'
                     echo'Hello'
                 }
