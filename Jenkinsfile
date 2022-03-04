@@ -14,7 +14,7 @@ pipeline{
         }
         stage('Login with credentials'){
             steps{
-                    powershell 'git push origin release'}
+                    powershell 'git push origin release'
                     echo'Hello'
                 }
             }
