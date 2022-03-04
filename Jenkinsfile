@@ -14,6 +14,8 @@ pipeline{
         }
         stage('Login with credentials'){
             steps{echo'Hello'
+                    powershell 'git config --global user.name "RemiCailliot" '
+                    powershell 'git config --global user.email "remi.cailliot@efrei.net"'
                     powershell 'git push https://RemiCailliot:Fitzgerald987@github.com/RemiCailliot/Data_Eng-2_Final_Project.git release'
                     echo'Hello'
                 }
