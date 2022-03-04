@@ -14,7 +14,7 @@ pipeline{
         }
         stage('Login with credentials'){
             steps{
-                    sh('git push https://RemiCailliot:Fitzgerald987@github.com/RemiCailliot/Data_Eng-2_Final_Project.git release' )
+                    sh('git push origin release' )
                 }
             }
     }
