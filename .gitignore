@@ -10,3 +10,4 @@ tests/__pycache__/test_integration.cpython-38-pytest-7.0.1.pyc
 tests/__pycache__/test_stress.cpython-38-pytest-7.0.1.pyc
 __pycache__/app.cpython-39.pyc
 __pycache__/app.cpython-38.pyc
+Jenkinsfile
