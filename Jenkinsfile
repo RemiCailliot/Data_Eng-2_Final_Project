@@ -14,10 +14,7 @@ pipeline{
         }
         stage('Login with credentials'){
             steps{
-                    powershell 'git add .'
-                    powershell 'git commit -m "test"'
-                    powershell 'git remote -v'
-                    powershell 'git push --force-with-lease origin release'
+                    powershell 'git push origin development:release'
                     echo'Hello'
                 }
             }
