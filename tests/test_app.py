@@ -11,4 +11,4 @@ def test_should_return_a_correct_answer(client):
     data = rv.data.decode()
     response = client.get('/main')
     assert response.status_code == 200
-    assert data == '0.0020555535'
+    assert '%.7f'%float(data) == '0.0020556'
