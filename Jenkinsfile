@@ -8,7 +8,7 @@ pipeline{
         }
         stage('Pull request'){
             steps{  
-                powershell 'git request-pull origin/release https://github.com/RemiCailliot/Data_Eng-2_Final_Project.git/ master'
+                powershell 'git request-pull origin/release origin master'
             }
         }
     }
