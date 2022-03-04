@@ -8,8 +8,6 @@ def create_app(test_config=None):
     @app.route('/main')
     def my_form():
         return render_template('my-form.html')
-
-
     @app.route('/main', methods=['POST'])
     def my_form_post():
         text = request.form['text']
@@ -19,4 +17,5 @@ def create_app(test_config=None):
     if __name__ =='__main__':
         app.run(host='0.0.0.0',port=5000)
     return app
+
 
