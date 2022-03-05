@@ -3,12 +3,17 @@ pipeline{
     stages{
         stage('Cloning Git'){
             steps{  
-                git(url:'https://github.com/RemiCailliot/Data_Eng-2_Final_Project.git/', branch: 'release')
+                git(url:'https://github.com/RemiCailliot/Data_Eng-2_Final_Project.git/', branch: 'development')
             }
         }
-        stage('Pull request'){
+        stage('Stress testing'){
             steps{  
-                powershell 'git push -o merge_request.create origin master:release'
+                powershell 'pytest tests/conftest.py tests/test_function.py'
+            }
+        }
+        stage('Push dev into release'){
+            steps{  
+                powershell 'git push origin release:development'
             }
         }
     }
