@@ -17,5 +17,5 @@ def create_app(test_config=None):
     if __name__ =='__main__':
         app.run(host='0.0.0.0',port=5000)
     return app
-
+create_app()
 
