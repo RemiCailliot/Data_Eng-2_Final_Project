@@ -1,15 +1,14 @@
 pipeline{
     agent any
     stages{
-
         stage('Cloning Git'){
-            steps{
-                git(url:'https://github.com/RemiCailliot/Data_Eng-2_Final_Project.git/', branch: 'feature')
+            steps{  
+                git(url:'https://github.com/RemiCailliot/Data_Eng-2_Final_Project.git/', branch: 'release')
             }
         }
-        stage('Unit testing'){
-            steps{
-                powershell "pytest tests/conftest.py tests/test_function.py"
+        stage('Pull request'){
+            steps{  
+                powershell 'git push -o merge_request.create origin master:release'
             }
         }
     }
