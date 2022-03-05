@@ -8,7 +8,7 @@ pipeline{
         }
         stage('Pull request'){
             steps{  
-                powershell 'git push -o merge_request.create -o merge_request.target=master origin release'
+                powershell 'git push -o merge_request.create -o merge_request.target=origin/master origin release'
             }
         }
     }
