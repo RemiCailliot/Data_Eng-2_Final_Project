@@ -3,7 +3,12 @@ pipeline{
     stages{
         stage('Cloning Git'){
             steps{  
-                echo 'hello'
+                git(url:'https://github.com/RemiCailliot/Data_Eng-2_Final_Project.git/', branch: 'feature')
+            }
+        }
+        stage('Build docker'){
+            steps{  
+                powershell 'docekr-compose up'
             }
         }
     }
