@@ -8,7 +8,7 @@ pipeline{
         }
         stage('Build docker'){
             steps{  
-                powershell 'docker-compose up'
+                bat 'docker-compose up'
             }
         }
     }
