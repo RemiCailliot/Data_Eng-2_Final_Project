@@ -3,12 +3,12 @@ pipeline{
     stages{
         stage('Cloning Git'){
             steps{  
-                git(url:'https://github.com/RemiCailliot/Data_Eng-2_Final_Project.git/', branch: 'development')
+                git(url:'https://github.com/RemiCailliot/Data_Eng-2_Final_Project.git/', branch: 'release')
             }
         }
         stage('Pull request'){
             steps{  
-                powershell 'git push -o merge_request.create -o merge_request.target=origin/master origin release'
+                powershell 'git push -o merge_request.create origin master'
             }
         }
     }
