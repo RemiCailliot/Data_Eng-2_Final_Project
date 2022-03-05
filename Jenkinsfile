@@ -7,7 +7,7 @@ pipeline{
                 git(url:'https://github.com/RemiCailliot/Data_Eng-2_Final_Project.git/', branch: 'feature')
             }
         }
-        stage('Stress testing'){
+        stage('Unit testing'){
             steps{
                 powershell "pytest tests/conftest.py tests/test_function.py"
             }
